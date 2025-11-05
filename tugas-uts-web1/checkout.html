@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pemesanan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout Pemesanan Buku</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="stok.html">Kembali ke Katalog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Detail Pemesanan</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Buku</th>
+                    <th>Jumlah</th>
+                    <th>Harga Satuan</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="checkout-details">
+                <tr>
+                    <td id="checkout-item-name"></td>
+                    <td><input type="number" id="jumlah-pesan" value="1" min="1" style="width: 60px;"></td>
+                    <td id="checkout-item-harga"></td>
+                    <td id="checkout-subtotal"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <hr>
+
+        <h2>Informasi Pemesan & Pembayaran</h2>
+        <form id="pemesanan-form">
+            <h3>Informasi Pemesan</h3>
+            <label for="nama-pemesan">Nama Lengkap:</label>
+            <input type="text" id="nama-pemesan" name="nama-pemesan" required>
+
+            <label for="alamat">Alamat Pengiriman:</label>
+            <input type="text" id="alamat" name="alamat" required>
+            
+            <label for="no-hp">Nomor HP:</label>
+            <input type="text" id="no-hp" name="no-hp" required>
+
+            <h3>Metode Pembayaran</h3>
+            <select id="metode-bayar" name="metode-bayar" required>
+                <option value="">-- Pilih Metode Pembayaran --</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="cod">COD (Cash on Delivery)</option>
+            </select>
+            
+            <p style="margin-top: 20px;">**Total Keseluruhan:** <strong id="total-pembayaran">Rp X.XXX.XXX</strong></p>
+
+            <button type="submit" style="background-color: #007bff;">Konfirmasi Pemesanan</button>
+        </form>
+    </main>
+    
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

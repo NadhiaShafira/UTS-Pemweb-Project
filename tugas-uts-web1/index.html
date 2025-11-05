@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Gaya Internal/Khusus Login */
+        .login-links {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .login-links button {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
+            padding: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toko Buku Online</h1>
+    </header>
+    
+    <main class="form-container">
+        <h2>Login Pengguna</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Masukkan Email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Masukkan Password">
+
+            <button type="submit">Login</button>
+        </form>
+        
+        <div class="login-links">
+            <button id="lupa-password-btn">Lupa Password</button>
+            <span>|</span>
+            <button id="daftar-btn">Daftar</button>
+        </div>
+    </main>
+
+    <div id="modal-lupa-password" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Lupa Password</h3>
+            <p>Silakan masukkan email Anda untuk mereset password.</p>
+            <input type="email" placeholder="Email Anda" required>
+            <button>Kirim Permintaan Reset</button>
+        </div>
+    </div>
+
+    <div id="modal-daftar" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Pendaftaran Akun Baru</h3>
+            <p>Silakan isi detail Anda untuk mendaftar.</p>
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Daftar Sekarang</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

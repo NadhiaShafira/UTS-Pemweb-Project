@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Buku Online 💖</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard Utama Toko Buku 🛍️✨</h1>
+        <nav>
+            <ul>
+                <li><a href="stok.html">Katalog Buku 📚</a></li>
+                <li><a href="tracking.html">Tracking Pengiriman 🚚</a></li>
+                
+                <li><a href="#" onclick="showAlert('Fitur Laporan Pemesanan belum tersedia. Fokus pada Stok, Tracking, dan Checkout!')">Laporan Pemesanan 📝</a></li>
+                <li><a href="#" onclick="showAlert('Fitur Histroy Transaksi belum tersedia. Fokus pada Stok, Tracking, dan Checkout!')">Histroy Transaksi 📜</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 id="greeting"></h2> 
+        <p>Selamat datang di menu utama aplikasi pemesanan buku online. Yuk, kelola pesananmu dengan ceria! 💖</p>
+
+        <section id="menu-shortcuts">
+            <h3>Pintasan Menu Cepat 🚀</h3>
+            <ul>
+                <li><a href="stok.html">Lihat dan Pesan Buku (Katalog) 🤩</a></li>
+                <li><a href="tracking.html">Cek Status Pengiriman Anda 🗺️</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

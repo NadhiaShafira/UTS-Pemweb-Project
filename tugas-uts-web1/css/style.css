@@ -1,0 +1,312 @@
+/* css/style.css - Tema Pink Lucu */
+
+/* Variabel Warna (Opsional, tapi bagus untuk konsistensi) */
+:root {
+    --primary-color: #ff69b4; /* Pink Hot */
+    --secondary-color: #ffb6c1; /* Pink Muda / Light Pink */
+    --accent-color: #8a2be2; /* Blue Violet untuk kontras */
+    --text-color: #333;
+    --background-color: #fff0f5; /* Lavender Blush (Background sangat muda) */
+    --button-success: #3cb371; /* Medium Sea Green (Hijau untuk tombol sukses/pesan) */
+    --button-warning: #ff8c00; /* Dark Orange (Kuning/Oranye untuk warning) */
+    --tertiary-color: #ff1493; /* Deep Pink untuk highlight stok rendah */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Navigasi --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.7em 1.2em;
+    border-radius: 20px; 
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color); 
+    color: var(--primary-color); 
+    transform: translateY(-2px);
+}
+
+/* --- Kontainer Utama --- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 8px 15px rgba(255, 105, 180, 0.2); 
+    border-radius: 12px;
+}
+
+/* Judul dalam container */
+.container h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Gaya untuk Form (Login, Tracking, Checkout) --- */
+.form-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid var(--secondary-color); 
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: var(--primary-color); 
+    outline: none;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color); 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-container button:hover {
+    background-color: var(--tertiary-color); 
+    transform: translateY(-1px);
+}
+
+.login-links button {
+    background: none !important;
+    border: none !important;
+    color: var(--accent-color) !important; 
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.login-links button:hover {
+    color: var(--primary-color) !important;
+}
+
+/* --- Gaya untuk Modal/Pop-up --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 105, 180, 0.3); 
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 30px;
+    border: 5px solid var(--secondary-color);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    position: relative;
+    animation: slideDown 0.5s;
+}
+
+@keyframes slideDown {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close-btn {
+    color: var(--primary-color);
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- Gaya Tabel (Stok, Tracking) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid #ffe4e1; 
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle; /* Memastikan konten tabel di tengah vertikal */
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+}
+
+table tr:nth-child(even) {
+    background-color: #fffafa; 
+}
+
+table button {
+    background-color: var(--button-success);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+table button:hover {
+    opacity: 0.8;
+}
+
+/* --- 🖼️ KODE BARU UNTUK MENGATUR UKURAN GAMBAR COVER BUKU --- */
+.book-cover {
+    max-width: 60px; /* Batas lebar agar tidak terlalu besar di tabel */
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* --- Gaya Tombol Tambah Stok --- */
+#add-stock-btn {
+    /* Menggunakan gaya tombol yang lebih elegan, tidak inline style */
+    background-color: var(--tertiary-color); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 25px; /* Memberi jarak ke tabel */
+    width: auto;
+}
+#add-stock-btn:hover {
+    background-color: #ff69b4; 
+    transform: translateY(-2px);
+}
+#add-stock-btn::before {
+    content: "➕ ";
+}
+
+/* --- Gaya Tracking Pengiriman --- */
+
+/* Gaya Progress Bar untuk Tracking */
+.progress-bar-container {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    height: 25px;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    transition: width 0.6s ease-in-out;
+}
+
+/* Warna untuk Status (Progress Bar) */
+/* Gunakan logika width dari script.js, CSS hanya untuk warna dan transisi */
+.status-dikirim, .status-selesai-antar { 
+    background-color: var(--button-success); 
+}
+.status-dalam-perjalanan, .status-proses-antar { 
+    background-color: var(--button-warning); 
+}
+.status-tiba-di-hub, .status-diteruskan-ke-kantor {
+    background-color: var(--primary-color);
+}
+.status-penerimaan-di-loket {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+
+/* Gaya Dashboard Greeting */
+#greeting {
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}

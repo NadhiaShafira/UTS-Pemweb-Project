@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Lacak Pengiriman Pesanan</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="stok.html">Katalog Buku</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Cari Status Pengiriman</h2>
+        <div class="form-container" style="max-width: 500px;">
+            <label for="do-number">Nomor Delivery Order (DO):</label>
+            <input type="text" id="do-number" name="do-number" required placeholder="Contoh: 20230012">
+            
+            <button id="search-do-btn">Cari</button>
+        </div>
+
+        <hr>
+        
+        <div id="tracking-result">
+            <p>Masukkan Nomor DO dan tekan Cari untuk melihat status pengiriman.</p>
+        </div>
+    </main>
+    
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
