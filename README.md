@@ -51,16 +51,27 @@ tugas-uts-web1/
 │   └── style.css (File styling utama)
 
 ├── img/
+
 │   ├── bukul.png
+
 │   ├── buku2.png
+
 │   └── dst... (Folder untuk menyimpan gambar cover buku)
+
 ├── js/
+
 │   ├── data.js (Sumber data (Array JSON) untuk katalog dan pengguna)
+
 │   └── script.js (Logika utama, JS DOM, validasi, dan fungsi)
+
 ├── index.html (Halaman Login Utama)
+
 ├── dashboard.html (Halaman Menu Utama)
+
 ├── stok.html (Halaman Katalog/Stok Buku)
+
 ├── tracking.html (Halaman Cek Status Pengiriman)
+
 └── checkout.html (Halaman Keranjang dan Pemesanan)
 
 ## Teknologi yang Digunakan
@@ -76,3 +87,5 @@ tugas-uts-web1/
 - avaScript DOM: Penggunaan JS untuk Validasi Form, Manipulasi Data Tabel, dan Interaksi UI Kreatif (Progress Bar, Modal Box, Alert Box).
 
 ## Link Youtube
+
+[Tonton Video Presentasi UTS Pemrograman Web di YouTube](https://youtu.be/D7WiUBZ2s-A) 
