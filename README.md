@@ -1,14 +1,16 @@
 # UTS-Pemweb-Project
 
-NAMA                : Nadhia Shafira
+**NAMA                : NADHIA SHAFIRA**
 
-NIM                 : 312410498
+**NIM                 : 312410498**
 
-KELAS               : TI.24.A.5
+**KELAS               : TI.24.A.5**
 
-MATKUL              : PEMOGRAMAN WEB 1
+**MATKUL              : PEMOGRAMAN WEB 1**
 
-**Deskripsi singkat**  
+---
+
+## Deskripsi singkat
 
 Aplikasi Front-End Toko Buku Sederhana yang dibangun dengan HTML, CSS, dan JavaScript murni. Menyediakan fitur Katalog Dinamis, Checkout, dan Tracking Pengiriman dengan Progress Bar.
 
@@ -41,9 +43,13 @@ Aplikasi Front-End Toko Buku Sederhana yang dibangun dengan HTML, CSS, dan JavaS
 
 tugas-uts-web1/
 ├── assets/
+
 │   └── logo.png (Opsional: untuk ikon atau logo)
+
 ├── css/
+
 │   └── style.css (File styling utama)
+
 ├── img/
 │   ├── bukul.png
 │   ├── buku2.png
